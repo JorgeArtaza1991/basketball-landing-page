@@ -1,0 +1,438 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+/*MY CODE*/
+
+* {
+
+}
+
+html {
+height: 100%;
+}
+
+body {
+display: flex;
+flex-direction: column;
+min-height: 100%;
+}
+
+footer {
+width: 100%;
+height: 140px;
+margin-top: auto;
+background-color: #F88158;
+}
+
+@media only screen and (min-width: 280px) {
+header {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+header .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo .logo-link {
+width: 100%;
+font-size: 20px;
+color: #111;
+font-weight: bold;
+font-family: 'Source Sans 3'; 
+text-decoration: none;
+vertical-align: middle;
+}
+
+header .logo .logo-link .logo-img {
+vertical-align: middle;
+width: 40px;
+display: inline-block;
+}
+
+header nav .hamburger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 28px;
+    transition: all .3s ease-in;
+    background-color: transparent;
+    border: none;
+}
+
+header nav .hamburger .line {
+    width: 100%;
+    height: 6px;
+    background-color: #17408B;
+    border-radius: 4px;
+    transition: all .3s ease-in;
+}
+
+.line::before, .line::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background-color: #17408B;
+    border-radius: 4px;
+    transition: all .3s ease-in;
+    right: 0px;
+}
+
+.line::before {
+    transform: translateY(-14px);
+}
+
+.line::after {
+    transform: translateY(14px);
+}
+
+.hamburger.open .line {
+    background-color: transparent;
+}
+
+.hamburger.hamburger.open .line::before {
+    transform: rotate(45deg);
+    background-color: #C9082A;
+}
+
+.hamburger.hamburger.open .line::after {
+    transform: rotate(-45deg);
+    background-color: #C9082A;
+}
+
+header nav .index-ul {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background-color: #17408B;
+    width: 40%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.6s ease-in;
+}
+
+header nav .index-ul .index-li {
+    padding-bottom: 18px;
+}
+
+header nav .index-ul .index-li .index-a {
+    color: #fff;
+    font-size: 18px;
+    font-family: Roboto;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+main .landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+main .landing .img-hero {
+    order: 1;
+    width: 65%;
+    display: block;
+}
+
+main .landing .hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    order: 2;
+    padding-bottom: 20px;
+}
+
+main .landing .hero-section .hero-h1 {
+    align-self: flex-start;
+width: 100%;
+font-size: 24px;
+padding-bottom: 9px;
+color: #111;
+font-family: Roboto;
+}
+
+main .landing .hero-section .hero-p {
+    align-self: flex-start;
+    font-size: 18px;
+padding-bottom: 9px;
+color: #111;
+font-family: Roboto;
+}
+
+main .landing .hero-section .cta-btn {
+    align-self: flex-start;
+    font-size: 16px;
+    background-color: #F88158;
+    color: #fff;
+    padding: 8.16px 10px;
+    border-radius: 4px;
+}
+
+
+}
+
+@media only screen and (min-width: 360px) {
+    main .landing .img-hero {
+        order: 1;
+        width: 45%;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    main .landing .hero-section .hero-h1 {
+    font-size: 26px;
+    }
+}
+
+@media only screen and (min-width: 390px) {
+    header nav .index-ul {
+        justify-content: space-around;
+
+    }
+}
+
+@media only screen and (min-width: 412px) {
+    main .landing .hero-section .hero-h1 {
+        font-size: 28px;
+        }
+}
+
+@media only screen and (min-width: 540px) {
+    main .landing .img-hero {
+        width: 35%; 
+    }
+
+    main .landing .hero-section .hero-h1 {
+        font-size: 36px;
+        }
+}
+
+@media only screen and (min-width: 768px) {
+    header nav .hamburger {
+        display: none;
+    }
+
+    header nav .index-ul {
+        position: relative;
+        top: 12px;
+        background-color: #fff;
+        width: 40%;
+        height: 0%;
+        flex-direction: row;
+        justify-content: space-between;
+        opacity: 1;
+        padding-right: 10px;
+    }
+    
+    header nav .index-ul .index-li {
+        padding-left: 18px;
+    }
+    
+    header nav .index-ul .index-li .index-a {
+        color: #111;
+        font-size: 18px;
+    }
+
+    main .landing {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    main .landing .img-hero {
+        order: 2;
+        width: 25%;
+        display: block;
+    }
+    
+    main .landing .hero-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        order: 1;
+        padding-bottom: 20px;
+    }
+
+    main .landing .hero-section .hero-h1 {
+        font-size: 40px;
+        }
+}
+
+@media only screen and (min-width: 820px) {
+    main .landing {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5%;
+    }
+}
+
+@media only screen and (min-width: 912px) {
+    main .landing {
+        margin-top: 10%;
+    }
+    main .landing .hero-section .hero-h1 {
+        font-size: 46px;
+        }
+}
+@media only screen and (min-width: 1000px) {
+    main .landing {
+        margin-top: 0%;
+    }
+    main .landing .img-hero {
+        width: 300px; 
+    }
+
+    main .landing .hero-section {
+        width: 763px;
+        padding-bottom: 20px;
+    }
+
+    main .landing .hero-section .hero-h1 {
+        font-size: 52px;
+        }
+        header nav .index-ul {
+            top: 8px;
+        }
+
+        header nav .index-ul .index-li .index-a:hover {
+           transition: all .3s ease-in; 
+           color: #17408B;
+        }
+
+        main .landing .hero-section .cta-btn:hover {
+            transition: all .3s ease-in; 
+            background-color: #17408B;
+        }
+}
